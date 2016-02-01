@@ -1,2 +1,3 @@
 # softpromanagement
-Issue Mapping para crear el mapa sobre la lectura por equipo
+Issue Mapping Chaper 6
+and ideas,odt
