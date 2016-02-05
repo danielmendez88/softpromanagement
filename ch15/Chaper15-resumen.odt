@@ -1,0 +1,25 @@
+﻿La otra cara
+
+“Lo que no entendemos no poseemos” - Goethe
+
+Un programa de computadora es un intermediario entre el hombre y la máquina. El programador tiene otra cara, el cual cuenta una historia de usuario, incluso los programas privados requieren una documentación de ser necesario. Sin documentación los programas la cual es vital para mostrar al usuario la operabilidad, muchos de nosotros hemos criticado al autor anónimo de algún programa poco documentado y muchos de nosotros hemos tratado de inculcar en un nuevo programador una actitud acerca de la documentación que lo ayudara para toda la vida útil del desarrollo.
+ ¿Qué documentación es requerida?
+Diferentes niveles de documentación son requeridos, para el usuario casual del programa, para el usuario dependiente de un programa y para el usuario quien debe adaptarse a un programa. Cada usuario necesita una descripción del programa, la mayoría de la documentación falla en dar poca visión de los puntos principales que describen al programa.
+El diagrama de flujo es una pieza  de documentación del programa. Muchos programas no necesitan diagramas de flujo en absoluto ; pocos programas necesitan más de un diagrama de flujo de una sola página.
+Los diagramas de flujo muestran la estructura que toma de un programa, el cual es sólo un aspecto de su estructura. se convierte esencialmente en un diagrama de la estructura del programa
+Todas las normas sobre cuadro de las formas , conectores, numeración , etc. sólo son necesarios para dar inteligibilidad de diagramas de flujo detallados
+programas para generar esta " herramienta de diseño indispensables "
+El principal objetivo es minimizar la carga de la documentación.
+Primera idea, es utilizar partes que deben de estar de todos modos por razones del lenguaje de programación, para llevar lo necesario a la documentación, por lo tanto una asignar nombres simbólicos es una tarea principal es transmitir tanto significado como sea posible para el lector.
+Segunda idea, utilizar un espacio y formato lo más posible para mejorar la legibilidad y mostrar subordinación y jerarquización.
+Tercera idea, insertar comentarios en código, no abusar.
+Realizar la documentación cuando el programa se está escribiendo en primer lugar, esto minimiza el trabajo extra y hay menos obstáculos para hacerlo.
+Ejemplos para documentar un programación
+- usar espacio de nombres
+- usar nombres de programa adecuados
+- redactar una descripción del módulo o función.
+Por qué no aplicar comentarios...
+- código fuente más grande
+- requieren más pulsaciones de teclas.
+- los espacios de nombres y declaraciones de estructura pueden ser menos flexibles.
+El enfoque de auto documentación por parte de algunos lenguajes de alto nivel ayuda demasiado a los programadores.
