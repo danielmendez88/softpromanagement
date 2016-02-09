@@ -1,0 +1,237 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Caracteristicas principales</title>
+<style>
+td { font-family:Arial, Helvetica; font-size:8.0pt; font-weight:normal; }
+</style>
+<script Language="JavaScript1.2">
+<!--
+var highlightDiv = null;
+window.onload = function(){
+	var specificNodeID = unescape(parent.document.location.hash.substring(1));
+	scrollAndHighlight(specificNodeID);
+}
+
+var IE = 0; var IE5 = 0; var NS = 0; var GECKO = 0;
+var openpopups = new Array();
+if (document.all) {     // Internet Explorer Detected
+	OS = navigator.platform;
+	VER = new String(navigator.appVersion);
+	VER = VER.substr(VER.indexOf("MSIE")+5, VER.indexOf(" "));
+	if ((VER <= 5) && (OS == "Win32")) {
+		IE5 = true;
+	} else {
+		IE = true;
+	}
+}
+else if (document.layers) {   // Netscape Navigator Detected
+	NS = true;
+}
+else if (document.getElementById) { // Netscape 6 Detected
+	GECKO = true;
+}
+else {
+	alert("Unrecognized Browser Detected. Sorry, your browser is not compatible.");
+}
+
+function handleResize() {
+	location.reload();
+	return false;
+}
+
+if ((NS) && (navigator.platform == "MacPPC")) {
+	window.captureEvents(Event.RESIZE);
+	window.onresize = handleResize;
+}
+
+function scrollAndHighlight(specificNodeID) {
+	if (specificNodeID != null && specificNodeID != "") {
+		highlightDiv = document.getElementById(specificNodeID+'highlight');
+		if (highlightDiv) {
+			highlightDiv.style.visibility = 'visible';
+			x = highlightDiv.style.left;
+			y = highlightDiv.style.top;
+			yb = highlightDiv.style.height;
+			x = (x.substring(0, x.length-2))*1;
+			y = (y.substring(0, y.length-2))*1;
+			yb = (yb.substring(0, yb.length-2))*1;
+			y = y+yb;
+			window.scrollTo(x,y);
+			// This didn't work!
+			//node = highlightDiv = document.getElementById(specificNodeID);
+			//node.scrollIntoView(true);
+		}
+	}
+}
+
+function openNewWindow(url, name, features){
+	hideHints(1);
+	var popBox = window.open(url, name, features);
+	popBox.focus();
+return;
+}
+
+function loadFile(url, name) {
+	hideHints(1);
+	window.location.href = url;
+return;
+}
+
+function openFile(url, name) {
+	hideHints(1);
+	var popBox = window.open(url, name);
+	popBox.focus();
+return;
+}
+
+function showHint(event, popupName) {
+	hideHints(1);
+	if (GECKO) {
+		document.getElementById(popupName).style.left = event.layerX+7 + document.body.scrollLeft;
+		document.getElementById(popupName).style.top = event.layerY-5 + document.body.scrollTop;
+		document.getElementById(popupName).style.background = "#FFFED9";
+		document.getElementById(popupName).style.visibility = "visible";
+		openpopups.push(popupName);
+	}
+	else if (NS) {
+		document.layers[popupName].moveTo(event.pageX+7 + document.body.scrollLeft, event.pageY-5 + document.body.scrollTop);
+		document.layers[popupName].bgColor = "#FFFED9";
+		document.layers[popupName].visibility = "show";
+		openpopups.push(popupName);
+	}
+	else if (IE || IE5) {
+		window.event.cancelBubble = true;
+		document.all[popupName].style.left = window.event.clientX+7 + document.body.scrollLeft;
+		document.all[popupName].style.top = window.event.clientY-5 + document.body.scrollTop;
+		document.all[popupName].style.visibility = "visible";
+		openpopups[openpopups.length] = popupName;
+	}
+	return false;
+}
+
+function hideHighlight() {
+	if (highlightDiv != null) {
+		highlightDiv.style.visibility = 'hidden';
+	}
+}
+
+function hideHints(fromBody) {
+	var popupname;
+	for (var i = 0; i < openpopups.length; i++) {
+		popupname = new String (openpopups[i]);
+		if ( IE || (GECKO && fromBody == 1)) {
+			document.getElementById(popupname).style.visibility = "hidden";
+		}
+		else if (NS) {
+			document.layers[popupname].visibility = "hide";
+		}
+		else if (IE5) {
+			document.all[popupname].style.visibility = "hidden";
+		}
+	}
+	openpopups = new Array();
+	return;
+}
+
+//-->
+</script>
+</head>
+
+<body onClick="hideHints(0); hideHighlight(); return false;"  style="margin:0px; padding: 0px;">
+<table width='100%' style='margin-left: 10px; margin-top: 10px;'>
+<tr><td width="50"><a href="" onClick="javascript:openNewWindow('details/1921680161454984509432_1921680161454983067227.html','1921680161454984509432','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454984509432labelhint'); return false;"/>
+<img border='0' style='width:32px;height:32px;' src='images/plus.png' onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454984509432imagehint'); return false;"/></a></td><td nowrap><font face='Arial, Helvetica'><a name="nid1921680161454984509432_1921680161454983067227" href="" onClick="javascript:openNewWindow('details/1921680161454984509432_1921680161454983067227.html','1921680161454984509432','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454984509432labelhint'); return false;"/>La producción es mayor que el de las mismas personas trabajando de forma no cohesionada </a>
+</font></td></tr>
+<tr><td width="50"><a href="" onClick="javascript:openNewWindow('details/1921680161454985559760_1921680161454983067227.html','1921680161454985559760','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454985559760labelhint'); return false;"/>
+<img border='0' style='width:32px;height:32px;' src='images/plus.png' onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454985559760imagehint'); return false;"/></a></td><td nowrap><font face='Arial, Helvetica'><a name="nid1921680161454985559760_1921680161454983067227" href="" onClick="javascript:openNewWindow('details/1921680161454985559760_1921680161454983067227.html','1921680161454985559760','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454985559760labelhint'); return false;"/>Trabajan en tareas que otros declaran francamente aburridas haciendolo en tiempo record</a>
+</font></td></tr>
+<tr><td width="50"><a href="" onClick="javascript:openNewWindow('details/1921680161454985986155_1921680161454983067227.html','1921680161454985986155','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454985986155labelhint'); return false;"/>
+<img border='0' style='width:32px;height:32px;' src='images/plus.png' onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454985986155imagehint'); return false;"/></a></td><td nowrap><font face='Arial, Helvetica'><a name="nid1921680161454985986155_1921680161454983067227" href="" onClick="javascript:openNewWindow('details/1921680161454985986155_1921680161454983067227.html','1921680161454985986155','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454985986155labelhint'); return false;"/>Una vez que el equipo empieza a cohesionarse las probabilidades de éxtio aumentan drasticamente</a>
+</font></td></tr>
+<tr><td width="50"><a href="" onClick="javascript:openNewWindow('details/1921680161454986792024_1921680161454983067227.html','1921680161454986792024','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454986792024labelhint'); return false;"/>
+<img border='0' style='width:32px;height:32px;' src='images/plus.png' onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454986792024imagehint'); return false;"/></a></td><td nowrap><font face='Arial, Helvetica'><a name="nid1921680161454986792024_1921680161454983067227" href="" onClick="javascript:openNewWindow('details/1921680161454986792024_1921680161454983067227.html','1921680161454986792024','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'1921680161454986792024labelhint'); return false;"/>El equipo puede llegar a convertirse casi en imparable</a>
+</font></td></tr>
+</table>
+
+<div id="1921680161454984509432imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1921680161454984509432labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1921680161454984509432_1921680161454983067227highlight" style="position:absolute; z-index:15; visibility:hidden; left:10px; top:10px; width:34px; height:34px; border: 2px solid yellow"></div>
+<div id="1921680161454985559760imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1921680161454985559760labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1921680161454985559760_1921680161454983067227highlight" style="position:absolute; z-index:15; visibility:hidden; left:10px; top:46px; width:34px; height:34px; border: 2px solid yellow"></div>
+<div id="1921680161454985986155imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1921680161454985986155labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1921680161454985986155_1921680161454983067227highlight" style="position:absolute; z-index:15; visibility:hidden; left:10px; top:82px; width:34px; height:34px; border: 2px solid yellow"></div>
+<div id="1921680161454986792024imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1921680161454986792024labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1921680161454986792024_1921680161454983067227highlight" style="position:absolute; z-index:15; visibility:hidden; left:10px; top:118px; width:34px; height:34px; border: 2px solid yellow"></div>
+</body></html>
