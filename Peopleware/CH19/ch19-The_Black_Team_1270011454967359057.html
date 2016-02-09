@@ -1,0 +1,405 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>ch19-The Black Team</title>
+<style>
+td { font-family:Arial, Helvetica; font-size:8.0pt; font-weight:normal; }
+</style>
+<script Language="JavaScript1.2">
+<!--
+var highlightDiv = null;
+window.onload = function(){
+	var specificNodeID = unescape(parent.document.location.hash.substring(1));
+	scrollAndHighlight(specificNodeID);
+}
+
+var IE = 0; var IE5 = 0; var NS = 0; var GECKO = 0;
+var openpopups = new Array();
+if (document.all) {     // Internet Explorer Detected
+	OS = navigator.platform;
+	VER = new String(navigator.appVersion);
+	VER = VER.substr(VER.indexOf("MSIE")+5, VER.indexOf(" "));
+	if ((VER <= 5) && (OS == "Win32")) {
+		IE5 = true;
+	} else {
+		IE = true;
+	}
+}
+else if (document.layers) {   // Netscape Navigator Detected
+	NS = true;
+}
+else if (document.getElementById) { // Netscape 6 Detected
+	GECKO = true;
+}
+else {
+	alert("Unrecognized Browser Detected. Sorry, your browser is not compatible.");
+}
+
+function handleResize() {
+	location.reload();
+	return false;
+}
+
+if ((NS) && (navigator.platform == "MacPPC")) {
+	window.captureEvents(Event.RESIZE);
+	window.onresize = handleResize;
+}
+
+function scrollAndHighlight(specificNodeID) {
+	if (specificNodeID != null && specificNodeID != "") {
+		highlightDiv = document.getElementById(specificNodeID+'highlight');
+		if (highlightDiv) {
+			highlightDiv.style.visibility = 'visible';
+			x = highlightDiv.style.left;
+			y = highlightDiv.style.top;
+			yb = highlightDiv.style.height;
+			x = (x.substring(0, x.length-2))*1;
+			y = (y.substring(0, y.length-2))*1;
+			yb = (yb.substring(0, yb.length-2))*1;
+			y = y+yb;
+			window.scrollTo(x,y);
+			// This didn't work!
+			//node = highlightDiv = document.getElementById(specificNodeID);
+			//node.scrollIntoView(true);
+		}
+	}
+}
+
+function openNewWindow(url, name, features){
+	hideHints(1);
+	var popBox = window.open(url, name, features);
+	popBox.focus();
+return;
+}
+
+function loadFile(url, name) {
+	hideHints(1);
+	window.location.href = url;
+return;
+}
+
+function openFile(url, name) {
+	hideHints(1);
+	var popBox = window.open(url, name);
+	popBox.focus();
+return;
+}
+
+function showHint(event, popupName) {
+	hideHints(1);
+	if (GECKO) {
+		document.getElementById(popupName).style.left = event.layerX+7 + document.body.scrollLeft;
+		document.getElementById(popupName).style.top = event.layerY-5 + document.body.scrollTop;
+		document.getElementById(popupName).style.background = "#FFFED9";
+		document.getElementById(popupName).style.visibility = "visible";
+		openpopups.push(popupName);
+	}
+	else if (NS) {
+		document.layers[popupName].moveTo(event.pageX+7 + document.body.scrollLeft, event.pageY-5 + document.body.scrollTop);
+		document.layers[popupName].bgColor = "#FFFED9";
+		document.layers[popupName].visibility = "show";
+		openpopups.push(popupName);
+	}
+	else if (IE || IE5) {
+		window.event.cancelBubble = true;
+		document.all[popupName].style.left = window.event.clientX+7 + document.body.scrollLeft;
+		document.all[popupName].style.top = window.event.clientY-5 + document.body.scrollTop;
+		document.all[popupName].style.visibility = "visible";
+		openpopups[openpopups.length] = popupName;
+	}
+	return false;
+}
+
+function hideHighlight() {
+	if (highlightDiv != null) {
+		highlightDiv.style.visibility = 'hidden';
+	}
+}
+
+function hideHints(fromBody) {
+	var popupname;
+	for (var i = 0; i < openpopups.length; i++) {
+		popupname = new String (openpopups[i]);
+		if ( IE || (GECKO && fromBody == 1)) {
+			document.getElementById(popupname).style.visibility = "hidden";
+		}
+		else if (NS) {
+			document.layers[popupname].visibility = "hide";
+		}
+		else if (IE5) {
+			document.all[popupname].style.visibility = "hidden";
+		}
+	}
+	openpopups = new Array();
+	return;
+}
+
+//-->
+</script>
+</head>
+
+<body onClick="hideHints(0); hideHighlight(); return false;"  style="margin:0px; padding: 0px;">
+<img Suppress=true src="images/1270011454967359057_map.jpg" width="793" height="632" hspace=0 vspace=0 border=0 usemap="#1270011454967359057_map">
+<map name="1270011454967359057_map">
+<area id="nid1270011454967459281_1270011454967359057" shape="rect" coords="185,49,274,65" href="" onClick="javascript:openNewWindow('details/1270011454967459281_1270011454967359057.html','1270011454967459281','width=550, height=480, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454967459281labelhint'); return false;"/>
+<area shape="rect" coords="213,12,246,45" href="javascript:loadFile('Black_Team_1270011454967459281.html','1270011454967459281')" onClick="javascript:loadFile('Black_Team_1270011454967459281.html','1270011454967459281')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454967459281imagehint'); return false;"/>
+<area id="nid1270011454968206509_1270011454967359057" shape="poly" coords="62,461,95,461, 95,498,134,498, 134,514,23,514, 23,498,62,498"  href="" onClick="javascript:openNewWindow('details/1270011454968206509_1270011454967359057.html','1270011454968206509','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968206509imagehint'); return false;"/>
+<area id="nid1270011454968219830_1270011454967359057" shape="poly" coords="178,366,211,366, 211,403,261,403, 261,434,127,434, 127,403,178,403"  href="" onClick="javascript:openNewWindow('details/1270011454968219830_1270011454967359057.html','1270011454968219830','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968219830imagehint'); return false;"/>
+<area id="nid1270011454968260123_1270011454967359057" shape="poly" coords="222,91,255,91, 255,128,311,128, 311,144,166,144, 166,128,222,128"  href="" onClick="javascript:openNewWindow('details/1270011454968260123_1270011454967359057.html','1270011454968260123','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968260123imagehint'); return false;"/>
+<area id="nid1270011454968358185_1270011454967359057" shape="poly" coords="103,203,136,203, 136,240,163,240, 163,256,75,256, 75,240,103,240"  href="" onClick="javascript:openNewWindow('details/1270011454968358185_1270011454967359057.html','1270011454968358185','width=550, height=480, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968358185imagehint'); return false;"/>
+<area shape="rect" coords="136,198,148,214" onClick="javascript:openNewWindow('details/1270011454968358185_1270011454967359057.html','1270011454968358185','width=550, height=480, scrollbars=yes, resizable=yes')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968358185text'); return false;"/>
+<area id="nid1270011454968380845_1270011454967359057" shape="poly" coords="331,204,364,204, 364,241,370,241, 370,257,324,257, 324,241,331,241"  href="" onClick="javascript:openNewWindow('details/1270011454968380845_1270011454967359057.html','1270011454968380845','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968380845imagehint'); return false;"/>
+<area id="nid1270011454968741375_1270011454967359057" shape="poly" coords="236,269,269,269, 269,306,299,306, 299,322,205,322, 205,306,236,306"  href="" onClick="javascript:openNewWindow('details/1270011454968741375_1270011454967359057.html','1270011454968741375','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968741375imagehint'); return false;"/>
+<area id="nid1270011454968817554_1270011454967359057" shape="poly" coords="30,577,63,577, 63,614,82,614, 82,630,10,630, 10,614,30,614"  href="" onClick="javascript:openNewWindow('details/1270011454968817554_1270011454967359057.html','1270011454968817554','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968817554imagehint'); return false;"/>
+<area id="nid1270011454968834533_1270011454967359057" shape="poly" coords="124,564,157,564, 157,601,222,601, 222,617,59,617, 59,601,124,601"  href="" onClick="javascript:openNewWindow('details/1270011454968834533_1270011454967359057.html','1270011454968834533','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968834533imagehint'); return false;"/>
+<area id="nid1270011454968862987_1270011454967359057" shape="poly" coords="283,468,316,468, 316,505,321,505, 321,521,278,521, 278,505,283,505"  href="" onClick="javascript:openNewWindow('details/1270011454968862987_1270011454967359057.html','1270011454968862987','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968862987imagehint'); return false;"/>
+<area id="nid1270011454968898524_1270011454967359057" shape="poly" coords="252,563,285,563, 285,600,297,600, 297,616,239,616, 239,600,252,600"  href="" onClick="javascript:openNewWindow('details/1270011454968898524_1270011454967359057.html','1270011454968898524','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968898524imagehint'); return false;"/>
+<area id="nid1270011454968912364_1270011454967359057" shape="poly" coords="358,567,391,567, 391,604,438,604, 438,620,310,620, 310,604,358,604"  href="" onClick="javascript:openNewWindow('details/1270011454968912364_1270011454967359057.html','1270011454968912364','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968912364imagehint'); return false;"/>
+<area id="nid1270011454968937365_1270011454967359057" shape="poly" coords="476,540,509,540, 509,577,552,577, 552,608,432,608, 432,577,476,577"  href="" onClick="javascript:openNewWindow('details/1270011454968937365_1270011454967359057.html','1270011454968937365','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968937365imagehint'); return false;"/>
+<area id="nid1270011454968989567_1270011454967359057" shape="poly" coords="527,480,560,480, 560,517,608,517, 608,533,478,533, 478,517,527,517"  href="" onClick="javascript:openNewWindow('details/1270011454968989567_1270011454967359057.html','1270011454968989567','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454968989567imagehint'); return false;"/>
+<area id="nid1270011454969043572_1270011454967359057" shape="poly" coords="180,499,213,499, 213,536,239,536, 239,552,154,552, 154,536,180,536"  href="" onClick="javascript:openNewWindow('details/1270011454969043572_1270011454967359057.html','1270011454969043572','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454969043572imagehint'); return false;"/>
+<area id="nid1270011454969051249_1270011454967359057" shape="poly" coords="447,430,480,430, 480,467,490,467, 490,483,436,483, 436,467,447,467"  href="" onClick="javascript:openNewWindow('details/1270011454969051249_1270011454967359057.html','1270011454969051249','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454969051249imagehint'); return false;"/>
+<area id="nid1270011454969073702_1270011454967359057" shape="poly" coords="416,344,449,344, 449,381,492,381, 492,397,372,397, 372,381,416,381"  href="" onClick="javascript:openNewWindow('details/1270011454969073702_1270011454967359057.html','1270011454969073702','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454969073702imagehint'); return false;"/>
+<area id="nid1270011454969085678_1270011454967359057" shape="poly" coords="560,277,593,277, 593,314,610,314, 610,330,543,330, 543,314,560,314"  href="" onClick="javascript:openNewWindow('details/1270011454969085678_1270011454967359057.html','1270011454969085678','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454969085678imagehint'); return false;"/>
+<area id="nid1270011454969107122_1270011454967359057" shape="poly" coords="574,377,607,377, 607,414,642,414, 642,430,538,430, 538,414,574,414"  href="" onClick="javascript:openNewWindow('details/1270011454969107122_1270011454967359057.html','1270011454969107122','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454969107122imagehint'); return false;"/>
+<area id="nid1270011454969153450_1270011454967359057" shape="poly" coords="713,374,746,374, 746,411,792,411, 792,427,666,427, 666,411,713,411"  href="" onClick="javascript:openNewWindow('details/1270011454969153450_1270011454967359057.html','1270011454969153450','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'1270011454969153450imagehint'); return false;"/>
+</map></div>
+<div id="1270011454967459281imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to view map contents<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1270011454967459281labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to view map contents<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454967459281_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:184px; top:10px; width:91px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968206509imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968206509_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:22px; top:459px; width:113px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968219830imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968219830_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:126px; top:364px; width:136px; height:72px; border: 2px solid yellow"></div>
+<div id="1270011454968260123imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968260123_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:165px; top:89px; width:147px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968358185imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968358185_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:74px; top:201px; width:90px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968358185text" style="position: absolute; z-index: 20; visibility: hidden; left: 0; top: 0;">
+	<table width="250" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="250">
+			<td width="250" style="hint"><p>
+				https://www.youtube.com/watch?v=QzfxVoC0_KI
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="1270011454968380845imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968380845_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:323px; top:202px; width:48px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968741375imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968741375_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:204px; top:267px; width:96px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968817554imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968817554_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:9px; top:575px; width:74px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968834533imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968834533_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:58px; top:562px; width:165px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968862987imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968862987_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:277px; top:466px; width:45px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968898524imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968898524_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:238px; top:561px; width:60px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968912364imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968912364_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:309px; top:565px; width:130px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454968937365imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968937365_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:431px; top:538px; width:122px; height:72px; border: 2px solid yellow"></div>
+<div id="1270011454968989567imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454968989567_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:477px; top:478px; width:132px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454969043572imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454969043572_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:153px; top:497px; width:87px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454969051249imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454969051249_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:435px; top:428px; width:56px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454969073702imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454969073702_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:371px; top:342px; width:122px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454969085678imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454969085678_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:542px; top:275px; width:69px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454969107122imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454969107122_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:537px; top:375px; width:106px; height:57px; border: 2px solid yellow"></div>
+<div id="1270011454969153450imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid1270011454969153450_1270011454967359057highlight" style="position:absolute; z-index:15; visibility:hidden; left:665px; top:372px; width:128px; height:57px; border: 2px solid yellow"></div>
+</body></html>
