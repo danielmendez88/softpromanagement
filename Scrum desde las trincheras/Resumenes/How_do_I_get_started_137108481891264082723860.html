@@ -1,0 +1,423 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>How do I get started with CompendiumLD?</title>
+<style>
+td { font-family:Arial, Helvetica; font-size:8.0pt; font-weight:normal; }
+</style>
+<script Language="JavaScript1.2">
+<!--
+var highlightDiv = null;
+window.onload = function(){
+	var specificNodeID = unescape(parent.document.location.hash.substring(1));
+	scrollAndHighlight(specificNodeID);
+}
+
+var IE = 0; var IE5 = 0; var NS = 0; var GECKO = 0;
+var openpopups = new Array();
+if (document.all) {     // Internet Explorer Detected
+	OS = navigator.platform;
+	VER = new String(navigator.appVersion);
+	VER = VER.substr(VER.indexOf("MSIE")+5, VER.indexOf(" "));
+	if ((VER <= 5) && (OS == "Win32")) {
+		IE5 = true;
+	} else {
+		IE = true;
+	}
+}
+else if (document.layers) {   // Netscape Navigator Detected
+	NS = true;
+}
+else if (document.getElementById) { // Netscape 6 Detected
+	GECKO = true;
+}
+else {
+	alert("Unrecognized Browser Detected. Sorry, your browser is not compatible.");
+}
+
+function handleResize() {
+	location.reload();
+	return false;
+}
+
+if ((NS) && (navigator.platform == "MacPPC")) {
+	window.captureEvents(Event.RESIZE);
+	window.onresize = handleResize;
+}
+
+function scrollAndHighlight(specificNodeID) {
+	if (specificNodeID != null && specificNodeID != "") {
+		highlightDiv = document.getElementById(specificNodeID+'highlight');
+		if (highlightDiv) {
+			highlightDiv.style.visibility = 'visible';
+			x = highlightDiv.style.left;
+			y = highlightDiv.style.top;
+			yb = highlightDiv.style.height;
+			x = (x.substring(0, x.length-2))*1;
+			y = (y.substring(0, y.length-2))*1;
+			yb = (yb.substring(0, yb.length-2))*1;
+			y = y+yb;
+			window.scrollTo(x,y);
+			// This didn't work!
+			//node = highlightDiv = document.getElementById(specificNodeID);
+			//node.scrollIntoView(true);
+		}
+	}
+}
+
+function openNewWindow(url, name, features){
+	hideHints(1);
+	var popBox = window.open(url, name, features);
+	popBox.focus();
+return;
+}
+
+function loadFile(url, name) {
+	hideHints(1);
+	window.location.href = url;
+return;
+}
+
+function openFile(url, name) {
+	hideHints(1);
+	var popBox = window.open(url, name);
+	popBox.focus();
+return;
+}
+
+function showHint(event, popupName) {
+	hideHints(1);
+	if (GECKO) {
+		document.getElementById(popupName).style.left = event.layerX+7 + document.body.scrollLeft;
+		document.getElementById(popupName).style.top = event.layerY-5 + document.body.scrollTop;
+		document.getElementById(popupName).style.background = "#FFFED9";
+		document.getElementById(popupName).style.visibility = "visible";
+		openpopups.push(popupName);
+	}
+	else if (NS) {
+		document.layers[popupName].moveTo(event.pageX+7 + document.body.scrollLeft, event.pageY-5 + document.body.scrollTop);
+		document.layers[popupName].bgColor = "#FFFED9";
+		document.layers[popupName].visibility = "show";
+		openpopups.push(popupName);
+	}
+	else if (IE || IE5) {
+		window.event.cancelBubble = true;
+		document.all[popupName].style.left = window.event.clientX+7 + document.body.scrollLeft;
+		document.all[popupName].style.top = window.event.clientY-5 + document.body.scrollTop;
+		document.all[popupName].style.visibility = "visible";
+		openpopups[openpopups.length] = popupName;
+	}
+	return false;
+}
+
+function hideHighlight() {
+	if (highlightDiv != null) {
+		highlightDiv.style.visibility = 'hidden';
+	}
+}
+
+function hideHints(fromBody) {
+	var popupname;
+	for (var i = 0; i < openpopups.length; i++) {
+		popupname = new String (openpopups[i]);
+		if ( IE || (GECKO && fromBody == 1)) {
+			document.getElementById(popupname).style.visibility = "hidden";
+		}
+		else if (NS) {
+			document.layers[popupname].visibility = "hide";
+		}
+		else if (IE5) {
+			document.all[popupname].style.visibility = "hidden";
+		}
+	}
+	openpopups = new Array();
+	return;
+}
+
+//-->
+</script>
+</head>
+
+<body onClick="hideHints(0); hideHighlight(); return false;"  style="margin:0px; padding: 0px;">
+<img Suppress=true src="images/137108481891264082723860_map.jpg" width="809" height="818" hspace=0 vspace=0 border=0 usemap="#137108481891264082723860_map">
+<map name="137108481891264082723860_map">
+<area id="nid137108481891264082724235_137108481891264082723860" shape="rect" Coords="69,378,222,424" href="" onClick="javascript:openNewWindow('details/137108481891264082724235_137108481891264082723860.html','137108481891264082724235','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264082724235labelhint'); return false;"/>
+<area shape="rect" coords="129,341,162,374" href="http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/html/tutorial-1.html" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/html/tutorial-1.html', '137108481891264082724235')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264082724235imagehint'); return false;"/>
+<area id="nid137108481891264082724376_137108481891264082723860" shape="poly" coords="433,37,466,37, 466,74,543,74, 543,105,355,105, 355,74,433,74"  href="" onClick="javascript:openNewWindow('details/137108481891264082724376_137108481891264082723860.html','137108481891264082724376','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264082724376imagehint'); return false;"/>
+<area id="nid137108481891264082724564_137108481891264082723860" shape="rect" Coords="65,620,232,681" href="" onClick="javascript:openNewWindow('details/137108481891264082724564_137108481891264082723860.html','137108481891264082724564','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264082724564labelhint'); return false;"/>
+<area shape="rect" coords="132,583,165,616" href="http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/html/tutorial-3.html" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/html/tutorial-3.html', '137108481891264082724564')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264082724564imagehint'); return false;"/>
+<area id="nid137108481891264082724595_137108481891264082723860" shape="rect" Coords="411,488,514,519" href="" onClick="javascript:openNewWindow('details/137108481891264082724595_137108481891264082723860.html','137108481891264082724595','width=550, height=480, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264082724595labelhint'); return false;"/>
+<area shape="rect" coords="446,451,479,484" href="http://compendiumld.open.ac.uk/documentation/version1.0/QuickRefGuides/CompendiumLD-briefing-paper.pdf" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation/version1.0/QuickRefGuides/CompendiumLD-briefing-paper.pdf', '137108481891264082724595')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264082724595imagehint'); return false;"/>
+<area id="nid137108481891264082724610_137108481891264082723860" shape="rect" Coords="56,498,239,544" href="" onClick="javascript:openNewWindow('details/137108481891264082724610_137108481891264082723860.html','137108481891264082724610','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264082724610labelhint'); return false;"/>
+<area shape="rect" coords="131,461,164,494" href="http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/html/tutorial-2.html" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/html/tutorial-2.html', '137108481891264082724610')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264082724610imagehint'); return false;"/>
+<area id="nid137108481891264082724657_137108481891264082723860" shape="rect" Coords="635,249,808,295" href="" onClick="javascript:openNewWindow('details/137108481891264082724657_137108481891264082723860.html','137108481891264082724657','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264082724657labelhint'); return false;"/>
+<area shape="rect" coords="705,212,738,245" href="http://compendiumld.open.ac.uk/documentation.html" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation.html', '137108481891264082724657')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264082724657imagehint'); return false;"/>
+<area id="nid137108481891264091022902_137108481891264082723860" shape="poly" coords="135,204,168,204, 168,241,231,241, 231,272,72,272, 72,241,135,241"  href="" onClick="javascript:openNewWindow('details/137108481891264091022902_137108481891264082723860.html','137108481891264091022902','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264091022902imagehint'); return false;"/>
+<area id="nid137108481891264091123171_137108481891264082723860" shape="poly" coords="327,215,360,215, 360,252,434,252, 434,313,253,313, 253,252,327,252"  href="" onClick="javascript:openNewWindow('details/137108481891264091123171_137108481891264082723860.html','137108481891264091123171','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264091123171imagehint'); return false;"/>
+<area id="nid137108481891264091163907_137108481891264082723860" shape="poly" coords="512,224,545,224, 545,261,606,261, 606,292,450,292, 450,261,512,261"  href="" onClick="javascript:openNewWindow('details/137108481891264091163907_137108481891264082723860.html','137108481891264091163907','width=550, height=450, scrollbars=yes, resizable=yes');" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264091163907imagehint'); return false;"/>
+<area id="nid137108481891264091714574_137108481891264082723860" shape="rect" Coords="500,441,640,487" href="" onClick="javascript:openNewWindow('details/137108481891264091714574_137108481891264082723860.html','137108481891264091714574','width=550, height=480, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264091714574labelhint'); return false;"/>
+<area shape="rect" coords="554,404,587,437" href="http://compendiumld.open.ac.uk/documentation/version1.0/QuickRefGuides/userguide.pdf" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation/version1.0/QuickRefGuides/userguide.pdf', '137108481891264091714574')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264091714574imagehint'); return false;"/>
+<area id="nid137108481891264092283222_137108481891264082723860" shape="rect" Coords="352,384,484,415" href="" onClick="javascript:openNewWindow('details/137108481891264092283222_137108481891264082723860.html','137108481891264092283222','width=550, height=480, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264092283222labelhint'); return false;"/>
+<area shape="rect" coords="402,347,435,380" href="http://www.slideshare.net/andrew_x/getting-started-with-compendium-ld-version-1" target="_blank" onClick="openFile('http://www.slideshare.net/andrew_x/getting-started-with-compendium-ld-version-1', '137108481891264092283222')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264092283222imagehint'); return false;"/>
+<area shape="rect" coords="435,342,447,358" onClick="javascript:openNewWindow('details/137108481891264092283222_137108481891264082723860.html','137108481891264092283222','width=550, height=480, scrollbars=yes, resizable=yes')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264092283222text'); return false;"/>
+<area id="nid137108481891264093451221_137108481891264082723860" shape="rect" Coords="242,621,427,697" href="" onClick="javascript:openNewWindow('details/137108481891264093451221_137108481891264082723860.html','137108481891264093451221','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264093451221labelhint'); return false;"/>
+<area shape="rect" coords="318,584,351,617" href="http://www.slideshare.net/OUDLI/designing-in-cld-08" target="_blank" onClick="openFile('http://www.slideshare.net/OUDLI/designing-in-cld-08', '137108481891264093451221')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264093451221imagehint'); return false;"/>
+<area id="nid137108481891264162899637_137108481891264082723860" shape="rect" Coords="63,755,222,816" href="" onClick="javascript:openNewWindow('details/137108481891264162899637_137108481891264082723860.html','137108481891264162899637','width=550, height=450, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264162899637labelhint'); return false;"/>
+<area shape="rect" coords="126,718,159,751" href="http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation/version1.0/tutorials/', '137108481891264162899637')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264162899637imagehint'); return false;"/>
+<area id="nid137108481891264163712004_137108481891264082723860" shape="rect" Coords="607,383,765,414" href="" onClick="javascript:openNewWindow('details/137108481891264163712004_137108481891264082723860.html','137108481891264163712004','width=550, height=480, scrollbars=yes, resizable=yes');" onMouseOut="hideHints(1); return false;" onMouseOver="showHint(event,'137108481891264163712004labelhint'); return false;"/>
+<area shape="rect" coords="670,346,703,379" href="http://compendiumld.open.ac.uk/documentation/version1.0/QuickRefGuides/Stencils%20and%20nodes.pdf" target="_blank" onClick="openFile('http://compendiumld.open.ac.uk/documentation/version1.0/QuickRefGuides/Stencils%20and%20nodes.pdf', '137108481891264163712004')" onmouseout="hideHints(1); return false;" onmouseover="showHint(event,'137108481891264163712004imagehint'); return false;"/>
+</map></div>
+<div id="137108481891264082724235imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264082724235labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264082724235_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:68px; top:339px; width:155px; height:87px; border: 2px solid yellow"></div>
+<div id="137108481891264082724376imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264082724376_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:354px; top:35px; width:190px; height:72px; border: 2px solid yellow"></div>
+<div id="137108481891264082724564imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264082724564labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264082724564_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:64px; top:581px; width:169px; height:102px; border: 2px solid yellow"></div>
+<div id="137108481891264082724595imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264082724595labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264082724595_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:410px; top:449px; width:105px; height:72px; border: 2px solid yellow"></div>
+<div id="137108481891264082724610imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264082724610labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264082724610_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:55px; top:459px; width:185px; height:87px; border: 2px solid yellow"></div>
+<div id="137108481891264082724657imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264082724657labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264082724657_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:634px; top:210px; width:175px; height:87px; border: 2px solid yellow"></div>
+<div id="137108481891264091022902imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264091022902_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:71px; top:202px; width:161px; height:72px; border: 2px solid yellow"></div>
+<div id="137108481891264091123171imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264091123171_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:252px; top:213px; width:183px; height:102px; border: 2px solid yellow"></div>
+<div id="137108481891264091163907imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon or label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264091163907_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:449px; top:222px; width:158px; height:72px; border: 2px solid yellow"></div>
+<div id="137108481891264091714574imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264091714574labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264091714574_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:499px; top:402px; width:142px; height:87px; border: 2px solid yellow"></div>
+<div id="137108481891264092283222imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264092283222labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264092283222_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:351px; top:345px; width:134px; height:72px; border: 2px solid yellow"></div>
+<div id="137108481891264092283222text" style="position: absolute; z-index: 20; visibility: hidden; left: 0; top: 0;">
+	<table width="250" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="250">
+			<td width="250" style="hint"><p>
+				A slide and video show hosted on Sldeshare and Youtube.
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264093451221imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264093451221labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264093451221_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:241px; top:582px; width:187px; height:117px; border: 2px solid yellow"></div>
+<div id="137108481891264162899637imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264162899637labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264162899637_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:62px; top:716px; width:161px; height:102px; border: 2px solid yellow"></div>
+<div id="137108481891264163712004imagehint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+<div id="137108481891264163712004labelhint" style="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; left: 0; top: 0;">
+	<table width="200" border=1 cellpadding=1 cellspacing=0 bgcolor="#FFFED9">
+		<tr width="200">
+			<td width="200" style="hint"><p>
+				Click icon to follow hyperlink<br>Click label to view this node's details
+			</p></td>
+		</tr>
+	</table>
+</div>
+
+<div id="nid137108481891264163712004_137108481891264082723860highlight" style="position:absolute; z-index:15; visibility:hidden; left:606px; top:344px; width:160px; height:72px; border: 2px solid yellow"></div>
+</body></html>
