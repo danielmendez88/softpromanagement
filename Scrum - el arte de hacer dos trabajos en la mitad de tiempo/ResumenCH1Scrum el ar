@@ -1,0 +1,65 @@
+La Forma en la que el Mundo trabaja está Roto
+
+En marzo del 2010 la oficina federal de investigación cerraba su más grande y más ambicioso proyecto de modernización, uno que se supone iba a prevenir otro 9/11 pero el proyecto se convirtió en la mayor debacle del software de todos los tiempos, en más de una década el FBI ha tratado de actualizar su sistema de software sin éxito, siete meses antes se había anunciado laureado por el jefe de información Chad Fulgham, Jeff Johnson trató de corregir algo que todos creían no tenía arreglo. En 2010 en plena era de Facebook, Twitter, Amazon, etc. El sistema del FBI llamado Automated Case Support system corría en un mainframe gigantesco el cual era bueno para los 80’s pero ya no funcionaba para esta era. Cuando los agentes querían realizar algún movimiento dentro del sistema prácticamente tenían que hacerlo por su cuenta, ya que el sistema solo funcionaba como un procesador de texto y los seguimientos se tenían que hacer directamente entre los agentes. Cuando sucedió el 9/11 se encontró que una de las causas por la tardía respuesta del FBI se debió a que no se pudo acceder de buena manera a la información que se debía de analizar, cuando fueron llamados ante el senado el FBI sólo mostró su nuevo plan de actualización de software llamado the Virtual Case File que tendría un costo total de $170 millones de dólares, tres años después el proyecto fue cancelado. en el año 2009 se anunció la reapertura del proyecto con un nuevo nombre Sentinel system, pero en marzo del 2010 Lockheed Martin, el contratista para desarrollar el sistema le comenta a Johnson que habían gastado $405 millones de dólares y aún necesitaban un presupuesto de $350 millones más para poderlo terminar  y otros seis u ocho años para terminar el proyecto, el proyecto centinela fue cancelado.
+
+A New Way of Thinking
+
+Scrum creado 20 años atras
+hay dos formas de hacer las cosas :
+cascada .- Millones una sola entrega
+scrum
+hay varios estudios de la segunda guerra mundial en la cual buscaban nuevas formas para que la gente hiciera el trabajo pero no encontraron la forma de juntar la piezas.
+
+La razon para que trabeje este framework es simple, vio la forma en como la gente actualmente trabaja en lugar de decirles como trabajar. Busco por decadas las mejores practicasen las compañias , y los mejores equipos. Que los hacia superiores, que los hacia diferentes , que los hacia grandes y otros mediocrees
+
+
+Scrum termino viene de rugby, y se refiere a la manera en que los equipos trabajan juntos,y mueven la el balon juntos en el campo, cuidadosamente,con un proposito, cradida y un mismo objetivo.
+
+Scrum se pregunta porque toma mucho esfuerzo y tiempo hacer las cosas, toma su estructura aprendiendo de los process, 
+Inspeciona y adapta, para de hacer lo que haces, revisa lo que tines y ve que deverias de hacer y hazlo mejor.
+
+Scrum para carros ,lavandariass,planeaciones de bodas etcs
+
+
+Fixing the FBI
+
+Problema el equipo Sentinel cualquier cambio terminaba en una negociación de contrato, imprimieron toda la documentación y fueron 1 100 requerimientos. 
+Cuando trataron de priorizar los requerimientos todos dijeron que eran importantes
+
+Pero devieron preguntar que es lo que le da mas valor al proyecto, el 80 porciento del valor en una pieza de software es el 20 porciento de sus caracteristicas
+
+
+haciendo esto se daran cuenta de que en realidad no necesitan el otro 80 porciento o que lo que parecia importante no lo era
+
+
+2011 obtaron por cambiar a un metodo agil.redujeron su plantilla de 220 a 40 trabajadores el numero de empleados del FBI reducieron de 30 a 12 con un costo de 20 millones y 12 meses 
+
+
+El termino agil data del año 2001, se hizo un conclave de 60 lideres y escribieron el Manifiesto agil:
+personas por encima del proceso; productos que trabajen sobre la documentación, colaboración con clientes sobre la negociacion con ellos,responder al cambio atravez del plan.
+
+Scrum no es una metodologia puso estos valores en practica-
+
+Un monton de la ideas de Scrum son basadas en Toyota; especificamente Taiichi Ohno Toyota Production System.
+La producion fluye con rapidez y calma durante el proceso, una de las principales tareas es identificar y eliminar los obstaculos
+
+el FBI decidio ciclos de 2 semanas, esto permitio a los equipos obtener verdadera retroalimentacion, scrum llamo a estos ciclos Sprints, al principio ay una junta de planificación de srping, deciden cuanto trabajo deben hacer, piorizan la lista de cosas, escriben las tareas en sticky y los ponen en la pared.
+
+Al final del spring el equipo se junta y muestra los que han realizado, ven que otras tareas haran.
+
+El queria medir la velocidad de cada equipo para medirla con los sprints y ver cuanto habian mejorado, que tan rápido iban. Además el queria saber qué impedimentos lo volvian lento.
+El queria realmente no trabajar más horas sino trabajar mejor y listos. Descubrio que sus equipos incrementaban la productividad hasta por 3. Trabajaban mejor, pero lo más importante ellos se dieron cuanta de las cosas que los retrasaban.
+La parte más poderosa de scrum era conducir hacia un producto demostrable. 
+Scrum no se trata de los desarrolladores. Se trata de los clientes y de las partes interesadas, en realidad, un cambio organizacional.
+El dijo que con 5 porciento del presupuesto y veinte meses se iba a comprometer con lo que no habian podido hacer con 90 porciento del presupuesto en 10 años. El FBI pensó que sería un sistema temporal que iba a fallar y que volverian a usar papel y boligrafo.
+El uso del sistema sentinela, pudo ayudar a detener un fraude de una transferecia de un millon de dolares, trabajando en conjunto con las oficinas legales del pais de destino de la transferecia. Fue un gran apoyo, porque con el sistema de papel y boligrafo no hubiera podido detenerse.
+Recuerda la analogia de la gallina y el cerdo... donde para crear un restaurante, la gallina esta involucrada al poner huevos, pero un cerdo esta comprometido por el jamon.
+Cuenta la anecta de la liberación del lanzamiento del sistema de salud.gov, el front end se realizó en tres meses usando scrum, pero el back end fue una completa locura, el problema fue que todo el mundo dijo... "ese no es mi trabajo", debido a que no trabajaban en un proposito en común.
+Realmente no sólo porque todo el mundo siempre te ha dicho que es la forma en que funciona el mundo no quiere decir que tiene la razón. Existen diferentes formas de hacer las cosas de una manera diferente de trabajar, de lo contrario su empresa será subcontratada o morirá.
+El camino de Scrum puede ser usado no sólo para ambientes de negocio, puede ser aplicado en cualquier otro contexto para resolver un problema.
+
+El camino
+La planeación es util. seguir ciegamente los planes es estupido. -> es tentador trabajar y elaborar tablas sin fin, pero los planes detallados se rompen con la realidad. Es mejor trabajar con un método que pueda asumir cambios, descubrimientos y nuevas ideas.
+Inspeccionar y adaptar -> en cada momento detente,revisa lo que estas haciendo y ve como puedes mejorar.
+Cambiar o morir -> aferrarte a algo viejo sólo traera el fracaso, y si la competencia esta dispuesta a cambiar te dejaran en el polvo.
+Falla rápido par que puedas corregirte temprano -> trabajar en ciclos cortos permite comentarios del cliente, y se puede eliminar de imendiato lo que agrega esfuerzo desmedido.
